@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Литературные глубины</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Фоновое изображение на главной */
+        .hero {
+            background-image: url('robot.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Высота на весь экран */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Тёмные кнопки для навигации */
+        nav {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        /* Секция "О проекте" с отступами по 3 см */
+        .about {
+            padding: 4rem 2rem;
+            text-align: center;
+            background-color: #fff;
+            max-width: 800px;
+            margin: auto;
+            padding-left: 3cm;
+            padding-right: 3cm;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        /* Секция с картинкой уроков на всю ширину и высоту */
+        .lessons {
+            background-image: url('uroki.png');
+            background-size: cover;
+            background-position: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* Секция отзывов */
+        .reviews {
+            padding: 4rem 2rem;
+            text-align: center;
+            background-color: #f4f4f9;
+        }
+
+        .reviews h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .review-grid img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Секция с контактами */
+        .contacts {
+            padding: 4rem 2rem;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .contacts h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contacts p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav>
+        <ul>
+            <li><a href="blocks.html">Блоки занятий</a></li>
+            <li><a href="about.html">Обо мне</a></li>
+            <li><a href="schedule.html">Расписание</a></li>
+            <li><a href="club.html">Книжный клуб</a></li>
+            <li><a href="faq.html">Что? Где? Когда?</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="signup.html" role="button">Записаться</a></li>
+        </ul>
+    </nav>
+
+    <!-- Фон с картинкой robot.png -->
+    <section class="hero" style="background-image: url('robot.png'); background-size: cover; background-position: center; height: 100vh;">
+    </section>
+
+    <!-- О проекте -->
+    <section class="about" id="about">
+        <h2>О проекте</h2>
+        <p>Для детей, которые много читают, любят спорить и задавать вопросы. Им мало школьных знаний, они хотят копать глубже. Им хочется разобраться во всем досконально, а не плавать на поверхности фактов.</p>
+        <p>Я нашла формат, который решает эти проблемы. Мой учебный проект «Литературные глубины» нацелен на то, чтобы собрать из отдельных пазлов (тема, образ, герой, личность, мотив, сюжет и др.) целостную картину. Проект состоит из тематических блоков. В сентябре начинается новый блок занятий «Время: путешествие в четвертое измерение».</p>
+    </section>
+
+    <!-- Стартует новый блок курса -->
+    <section class="about">
+        <h2>Стартует новый блок курса</h2>
+        <h3>«Мир реальный vs Мир виртуальный» (8 занятий)</h3>
+        <p>26 октября мы начинаем новый блок занятий - «Мир реальный vs Мир виртуальный». Вы когда-нибудь задумывались, где именно проходит граница между реальным и виртуальным мирами? Что захватывает нас больше: настоящая жизнь или цифровое пространство? Где мы проводим больше времени? И, самое главное, можем ли мы быть уверены, что то, что нас окружает — это настоящая реальность?</p>
+        <p>Чтобы найти ответы на эти вопросы, мы погрузимся в фантастический мир рассказов Роберта Хайнлайна, Филипа Дика и Рэя Брэдбери, обсудим культовый фильм «Матрица» и миф о пещере Платона.</p>
+    </section>
+
+    <!-- Картинка уроков во весь экран -->
+    <section class="lessons">
+    </section>
+
+    <!-- Отзывы учеников -->
+    <section class="reviews">
+        <h2>За меня скажут ученики</h2>
+        <div class="review-grid">
+            <img src="otzyv_1.jpg" alt="Отзыв 1">
+            <img src="otzyv_2.jpg" alt="Отзыв 2">
+            <img src="otzyv_3.jpg" alt="Отзыв 3">
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contacts" id="contacts">
+        <h2>Контакты</h2>
+        <p>Email: <a href="mailto:literarydepths1@gmail.com">literarydepths1@gmail.com</a></p>
+        <p>Телефон: <a href="tel:+420730564017">+420 730 564 017</a></p>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <p>© 2024 Литературные глубины. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>

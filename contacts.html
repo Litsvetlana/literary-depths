@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        /* Фиксированное меню */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #444;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background-color: #666;
+        }
+
+        /* Отступ для контента */
+        body {
+            padding-top: 80px; /* Отступ сверху для фиксации меню */
+        }
+
+        /* Секция контактов */
+        .contacts-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2cm;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .contacts-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contacts-section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .contacts-section a {
+            display: inline-block;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .contacts-section a:hover {
+            color: #0056b3;
+        }
+
+        /* Стили для значков */
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        /* Кнопка-ссылка на Google Maps */
+        .contacts-section a.map-link {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        .contacts-section a.map-link:hover {
+            background-color: #0056b3;
+        }
+
+        /* Адаптация для мобильных устройств */
+        @media (max-width: 768px) {
+            .contacts-section {
+                padding: 1cm;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav>
+        <ul>
+            <li><a href="index.html">На главную</a></li>
+            <li><a href="blocks.html">Блоки занятий</a></li>
+            <li><a href="about.html">Обо мне</a></li>
+            <li><a href="schedule.html">Расписание</a></li>
+            <li><a href="club.html">Книжный клуб</a></li>
+            <li><a href="faq.html">Что? Где? Когда?</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="signup.html" role="button">Записаться</a></li>
+        </ul>
+    </nav>
+
+    <!-- Основной контент - Контакты -->
+    <section class="contacts-section">
+        <h1>Контакты</h1>
+        <p>+420 730 564 017</p>
+        <p><a href="mailto:literarydepths1@gmail.com">literarydepths1@gmail.com</a></p>
+
+        <!-- Значки Instagram и Telegram с активными ссылками -->
+        <div class="social-icons">
+            <a href="https://www.instagram.com/literary_depths/" target="_blank">
+                <img src="instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://t.me/knihyprahadeti" target="_blank">
+                <img src="telegram_icon.png" alt="Telegram">
+            </a>
+        </div>
+
+        <h2>Где проходят занятия?</h2>
+        <p>Уроки проходят в Русской школе на Туклатской в Праге.</p>
+        <p>Адрес: Tuklatská 2105/3, Praha 10 - Strašnice</p>
+
+        <!-- Ссылка на Google карты -->
+        <a href="https://www.google.com/maps/place/Tuklatská+2105%2F3,+Praha+10" class="map-link" target="_blank">Открыть на карте</a>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Книжный клуб</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        /* Фиксированное меню */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #444;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background-color: #666;
+        }
+
+        /* Отступ для контента */
+        body {
+            padding-top: 80px; /* Отступ сверху для фиксации меню */
+        }
+
+        /* Оформление секции "Книжный клуб" */
+        .book-club-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2cm;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-club-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .book-club-section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        /* Стили для списка */
+        .book-club-section ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        .book-club-section ul li {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .book-club-section a.button {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        .book-club-section a.button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Адаптация для мобильных устройств */
+        @media (max-width: 768px) {
+            .book-club-section {
+                padding: 1cm;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav>
+        <ul>
+            <li><a href="index.html">На главную</a></li>
+            <li><a href="blocks.html">Блоки занятий</a></li>
+            <li><a href="about.html">Обо мне</a></li>
+            <li><a href="schedule.html">Расписание</a></li>
+            <li><a href="club.html">Книжный клуб</a></li>
+            <li><a href="faq.html">Что? Где? Когда?</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="signup.html" role="button">Записаться</a></li>
+        </ul>
+    </nav>
+
+    <!-- Основной контент - Книжный клуб -->
+    <section class="book-club-section">
+        <h1>Книжный клуб</h1>
+        <p>Добро пожаловать в наш книжный клуб — пространство, где великие мифы, фантастические миры и классическая литература пересекаются с философией, временем и будущим. Вдохновляйтесь самыми яркими идеями человечества и делитесь своими мыслями о прочитанном!</p>
+
+        <h2>Как это работает:</h2>
+        <ul>
+            <li>В нашем телеграм-канале я выкладываю анонс произведения и его автора.</li>
+            <li>Вы читаете, погружаетесь в мир книги.</li>
+            <li>Мы встречаемся онлайн и обсуждаем.</li>
+            <li>Погружаемся в чтение, разбираемся в смыслах, весело спорим и вместе ищем ответы!</li>
+        </ul>
+
+        <!-- Кнопка для перехода на Телеграм канал -->
+        <a href="https://t.me/knihyprahadeti" class="button" target="_blank">Перейти в Telegram-канал</a>
+    </section>
+
+</body>
+</html>

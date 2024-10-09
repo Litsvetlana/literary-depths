@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Записаться на урок</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Фиксированное меню */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #444;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background-color: #666;
+        }
+
+        /* Отступ для контента */
+        body {
+            padding-top: 80px; /* Отступ сверху для фиксации меню */
+        }
+
+        /* Фон с картинкой */
+        .form-section {
+            background-image: url('koncert_marcians.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Стиль формы */
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        form {
+            display: grid;
+            gap: 1rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav>
+        <ul>
+            <li><a href="index.html">На главную</a></li>
+            <li><a href="blocks.html">Блоки занятий</a></li>
+            <li><a href="about.html">Обо мне</a></li>
+            <li><a href="schedule.html">Расписание</a></li>
+            <li><a href="club.html">Книжный клуб</a></li>
+            <li><a href="faq.html">Что? Где? Когда?</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="signup.html" role="button">Записаться</a></li>
+        </ul>
+    </nav>
+
+    <!-- Секция с формой -->
+    <section class="form-section">
+        <div class="form-container">
+            <h1>Записаться на урок</h1>
+            <!-- Форма для записи -->
+            <form id="contact-form" action="https://formspree.io/f/xrbgzjzn" method="POST">
+                <input type="text" id="name" name="name" placeholder="Ваше имя" aria-label="Ваше имя" required>
+                <input type="email" id="email" name="email" placeholder="Ваш email" aria-label="Ваш email" required>
+                <input type="tel" id="phone" name="phone" placeholder="Контактный телефон" aria-label="Контактный телефон" required>
+                <textarea id="message" name="message" rows="4" placeholder="Ваше сообщение" aria-label="Ваше сообщение"></textarea>
+                <button type="submit">Ура! Я иду на урок!</button>
+            </form>
+            <!-- Контейнер для сообщения -->
+            <div id="form-message" style="margin-top: 20px;"></div>
+            <script>
+                document.querySelector("#contact-form").addEventListener("submit", function(event) {
+                    event.preventDefault(); // Останавливает автоматическое перенаправление
+
+                    fetch(this.action, {
+                        method: this.method,
+                        body: new FormData(this),
+                        headers: { 'Accept': 'application/json' }
+                    }).then(response => {
+                        if (response.ok) {
+                            document.getElementById("form-message").innerHTML = "<p style='color: green;'>Спасибо за вашу запись! Мы скоро с вами свяжемся.</p>";
+                            this.reset(); // Очищает форму после отправки
+                        } else {
+                            document.getElementById("form-message").innerHTML = "<p style='color: red;'>Произошла ошибка. Попробуйте снова.</p>";
+                        }
+                    }).catch(error => {
+                        document.getElementById("form-message").innerHTML = "<p style='color: red;'>Произошла ошибка. Попробуйте снова.</p>";
+                    });
+                });
+            </script>
+        </div>
+    </section>
+
+</body>
+</html>

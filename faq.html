@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Что? Где? Когда?</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        /* Фиксированное меню */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #444;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background-color: #666;
+        }
+
+        /* Отступ для контента */
+        body {
+            padding-top: 80px; /* Отступ сверху для фиксации меню */
+        }
+
+        /* Оформление секции "Что? Где? Когда?" */
+        .quiz-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2cm;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .quiz-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .quiz-section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .quiz-section a.button {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .quiz-section a.button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Адаптация для мобильных устройств */
+        @media (max-width: 768px) {
+            .quiz-section {
+                padding: 1cm;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav>
+        <ul>
+            <li><a href="index.html">На главную</a></li>
+            <li><a href="blocks.html">Блоки занятий</a></li>
+            <li><a href="about.html">Обо мне</a></li>
+            <li><a href="schedule.html">Расписание</a></li>
+            <li><a href="club.html">Книжный клуб</a></li>
+            <li><a href="faq.html">Что? Где? Когда?</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="signup.html" role="button">Записаться</a></li>
+        </ul>
+    </nav>
+
+    <!-- Основной контент -->
+    <section class="quiz-section">
+        <h1>Что? Где? Когда?</h1>
+        <p>Позвольте представить интеллектуальную игру для тех подростков, чьи умы жаждут знаний и стремятся к новым открытиям! Если вы любите задавать вопросы, проявлять инициативу и не хотите просто плыть по течению, то это именно для вас!</p>
+        <p>Игра «Что? Где? Когда?» объединяет любопытных и активных участников со всей Чехии. Здесь вы сможете развивать свои навыки, обмениваться идеями и, конечно, весело проводить время с единомышленниками!</p>
+        <p>Подготовьтесь к битвам интеллектов, где инициатива, любопытство и ваш острый ум — главное оружие!</p>
+
+        <!-- Кнопка-ссылка на сайт игры -->
+        <a href="https://intellektigra.tilda.ws/" class="button" target="_blank">Узнать больше о «Что? Где? Когда?»</a>
+    </section>
+
+</body>
+</html>

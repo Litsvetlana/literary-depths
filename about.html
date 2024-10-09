@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Обо мне</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        /* Фиксированное меню */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #444;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background-color: #666;
+        }
+
+        /* Отступ для контента */
+        body {
+            padding-top: 60px; /* Чтобы контент не перекрывался меню */
+        }
+
+        /* Оформление секции "Обо мне" */
+        .about-section {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1cm;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 80px; /* Дополнительный отступ сверху */
+        }
+
+        /* Стили для текста в секции */
+        .about-text {
+            flex: 1;
+            text-align: justify;
+            line-height: 1.6;
+            padding-right: 1rem;
+        }
+
+        /* Фиксированное изображение размером 5x5 см */
+        .about-image {
+            width: 5cm;
+            height: 5cm;
+            border-radius: 10px;
+            margin-left: 1rem; /* Отступ от текста */
+        }
+
+        /* Адаптация для мобильных устройств */
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about-text {
+                margin-bottom: 1rem;
+            }
+            .about-image {
+                width: 5cm; /* Размер изображения останется 5x5 см */
+                height: 5cm;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Меню навигации -->
+    <nav>
+        <ul>
+            <li><a href="index.html">На главную</a></li>
+            <li><a href="blocks.html">Блоки занятий</a></li>
+            <li><a href="about.html">Обо мне</a></li>
+            <li><a href="schedule.html">Расписание</a></li>
+            <li><a href="club.html">Книжный клуб</a></li>
+            <li><a href="faq.html">Что? Где? Когда?</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="signup.html" role="button">Записаться</a></li>
+        </ul>
+    </nav>
+
+    <section class="about-section">
+        <div class="about-text">
+            <h1>Обо мне</h1>
+            <p>Меня зовут Светлана Андреевна. Я филолог-славист, учитель литературы. Я закончила Государственную академию славянской культуры в Москве, и в Чехии мой диплом нострифицирован.</p>
+            <p>Чиню то, что на каком-то этапе сломалось - интерес к книге и чтению. Я работаю с вниманием на личность и через диалог. Мой подход - эвристический и сократический методы, когда я не выкладываю все на блюдечке, а с помощью вопросов ученик приходит к ответу сам.</p>
+            <p>Нахождение, развитие и высказывание своей мысли, искусно ее выражать устно и письменно, поэтическая свобода, внимание к деталям - это основные постулаты моего преподавания.</p>
+        </div>
+        <img src="Obo_mne.png" alt="Светлана Андреевна" class="about-image">
+    </section>
+
+</body>
+</html>
